@@ -21,7 +21,6 @@ const useStyles = makeStyles({
   },
   infoCard: {
     display: "flex",
-    flexDirection: "column",
     textAlign: "center"
   }
 });
@@ -80,15 +79,13 @@ function App({ articles }) {
                     {infoCard.title}
                   </Typography>{" "}
                   {infoCard.info ? (
-                    <Typography variant="h6">
-                      <strong>
-                        {infoCard.title.split(" ")[2]}:
-                        <br />
-                        {infoCard.info}
-                      </strong>
+                    <Typography variant="p">
+                      <h2>{infoCard.title.split(" ")[2]}:</h2>
+                      <br />
+                      {infoCard.info}
                     </Typography>
                   ) : null}
-                  <Typography variant="h6" component="h6">
+                  <Typography variant="p" component="p">
                     Try saying: <br /> <i>{infoCard.text}</i>
                   </Typography>
                 </div>
